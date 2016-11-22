@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--News Feed-->
+        <!--News Feed Controller-->
         <scene sceneID="cc6-fm-xPk">
             <objects>
                 <tableViewController id="QUz-zh-kYn" customClass="NewsFeedController" customModule="CourseraSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsFeedCell" rowHeight="94" id="h9c-mJ-X4j" customClass="NewsFeedCell" customModule="CourseraSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="94"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="NewsFeedCell" rowHeight="94" id="h9c-mJ-X4j" customClass="NewsFeedCell" customModule="CourseraSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h9c-mJ-X4j" id="WkQ-Xo-EUa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjM-9K-mVZ">
@@ -39,6 +39,7 @@
                                 <connections>
                                     <outlet property="newsSnippet" destination="P6n-my-uoL" id="FSm-Zf-yyn"/>
                                     <outlet property="newsTitle" destination="LjM-9K-mVZ" id="D4A-5g-G2L"/>
+                                    <segue destination="WeT-ZU-sfK" kind="showDetail" identifier="NewsDetailSegue" id="gIv-kf-Umb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,11 +48,48 @@
                             <outlet property="delegate" destination="QUz-zh-kYn" id="PRW-3W-1fN"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News Feed" image="first" id="QSQ-BE-9Da"/>
+                    <navigationItem key="navigationItem" id="e1d-Nc-Id9"/>
+                    <connections>
+                        <outlet property="newsList" destination="0Iw-aC-wcx" id="ZSe-Sb-EXr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHG-ls-RaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-1071"/>
+            <point key="canvasLocation" x="1588" y="-1071"/>
+        </scene>
+        <!--News Detail-->
+        <scene sceneID="Yu0-Bw-t6D">
+            <objects>
+                <viewController id="WeT-ZU-sfK" customClass="NewsDetail" customModule="CourseraSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a8D-I7-cwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="D0u-bf-brr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ywi-PW-T8n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-f8-xun">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="top" secondItem="a8D-I7-cwB" secondAttribute="bottom" id="A5Y-wC-U56"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="trailing" secondItem="Ywi-PW-T8n" secondAttribute="trailingMargin" id="PmG-sD-4zh"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="leading" secondItem="Ywi-PW-T8n" secondAttribute="leadingMargin" id="fUt-HT-4fr"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="top" secondItem="a8D-I7-cwB" secondAttribute="bottom" id="gRW-9T-gRu"/>
+                            <constraint firstItem="D0u-bf-brr" firstAttribute="top" secondItem="hXQ-f8-xun" secondAttribute="bottom" id="jE5-me-MkP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="hXQ-f8-xun" id="MOO-BY-TzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xua-ez-mfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="-1071"/>
         </scene>
         <!--About this app-->
         <scene sceneID="wg7-f3-ORb">
@@ -120,13 +158,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QUz-zh-kYn" kind="relationship" relationship="viewControllers" id="iKi-4B-6O6"/>
+                        <segue destination="Kw3-UZ-Thz" kind="relationship" relationship="viewControllers" id="iKi-4B-6O6"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-232" y="-96"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="V8b-vT-pYd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kw3-UZ-Thz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News Feed" image="first" id="QSQ-BE-9Da"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ens-Oa-eEn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QUz-zh-kYn" kind="relationship" relationship="rootViewController" id="oZ6-AV-w7C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6m-Rj-HtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="-1071"/>
         </scene>
     </scenes>
     <resources>

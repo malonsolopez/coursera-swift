@@ -10,6 +10,9 @@ import UIKit
 
 class NewsFeedController: UITableViewController {
     
+    
+    @IBOutlet var newsList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +41,14 @@ class NewsFeedController: UITableViewController {
         cell.newsSnippet.text = "Snippet of this news"
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if  segue.identifier == "NewsDetailSegue",
+            let destination = segue.destinationViewController as? NewsDetail
+            //blogIndex = tableView.indexPathForSelectedRow?.row
+        {
+            destination.newsURL = "http://www.coursera.org"        }
     }
     
 }

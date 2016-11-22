@@ -14,6 +14,7 @@
 		4CA40A121DDE9355009726A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA40A101DDE9355009726A4 /* LaunchScreen.storyboard */; };
 		4CCD9DED1DE3CBBC004ED90E /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */; };
 		4CCD9DF11DE3D4A3004ED90E /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */; };
+		4CCD9DF31DE3D95A004ED90E /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4CA40A131DDE9355009726A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedController.swift; sourceTree = "<group>"; };
 		4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
+		4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4CA40A051DDE9355009726A4 /* AppDelegate.swift */,
 				4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */,
 				4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */,
+				4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */,
 				4CA40A091DDE9355009726A4 /* SecondViewController.swift */,
 				4CA40A0B1DDE9355009726A4 /* Main.storyboard */,
 				4CA40A0E1DDE9355009726A4 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				4CCD9DED1DE3CBBC004ED90E /* NewsFeedController.swift in Sources */,
 				4CA40A0A1DDE9355009726A4 /* SecondViewController.swift in Sources */,
 				4CCD9DF11DE3D4A3004ED90E /* NewsFeedCell.swift in Sources */,
+				4CCD9DF31DE3D95A004ED90E /* NewsDetail.swift in Sources */,
 				4CA40A061DDE9355009726A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

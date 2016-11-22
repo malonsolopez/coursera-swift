@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//Controller for the "About this app" tab
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
