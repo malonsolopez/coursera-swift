@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--News Feed Controller-->
+        <!--News Feed-->
         <scene sceneID="cc6-fm-xPk">
             <objects>
                 <tableViewController id="QUz-zh-kYn" customClass="NewsFeedController" customModule="CourseraSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                 <connections>
                                     <outlet property="newsSnippet" destination="P6n-my-uoL" id="FSm-Zf-yyn"/>
                                     <outlet property="newsTitle" destination="LjM-9K-mVZ" id="D4A-5g-G2L"/>
-                                    <segue destination="WeT-ZU-sfK" kind="showDetail" identifier="NewsDetailSegue" id="gIv-kf-Umb"/>
+                                    <segue destination="WeT-ZU-sfK" kind="show" id="kuV-h4-goZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +48,9 @@
                             <outlet property="delegate" destination="QUz-zh-kYn" id="PRW-3W-1fN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="e1d-Nc-Id9"/>
+                    <navigationItem key="navigationItem" title="News Feed" id="e1d-Nc-Id9">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="2JB-QE-7oG"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHG-ls-RaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,13 +75,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hXQ-f8-xun" firstAttribute="top" secondItem="a8D-I7-cwB" secondAttribute="bottom" id="A5Y-wC-U56"/>
-                            <constraint firstItem="hXQ-f8-xun" firstAttribute="trailing" secondItem="Ywi-PW-T8n" secondAttribute="trailingMargin" id="PmG-sD-4zh"/>
-                            <constraint firstItem="hXQ-f8-xun" firstAttribute="leading" secondItem="Ywi-PW-T8n" secondAttribute="leadingMargin" id="fUt-HT-4fr"/>
-                            <constraint firstItem="hXQ-f8-xun" firstAttribute="top" secondItem="a8D-I7-cwB" secondAttribute="bottom" id="gRW-9T-gRu"/>
-                            <constraint firstItem="D0u-bf-brr" firstAttribute="top" secondItem="hXQ-f8-xun" secondAttribute="bottom" id="jE5-me-MkP"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="bottom" secondItem="Ywi-PW-T8n" secondAttribute="bottomMargin" id="V7b-N0-KME"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="top" secondItem="Ywi-PW-T8n" secondAttribute="topMargin" id="ehv-Ru-VVO"/>
+                            <constraint firstItem="hXQ-f8-xun" firstAttribute="leading" secondItem="Ywi-PW-T8n" secondAttribute="leadingMargin" id="uks-qZ-oNQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hXQ-f8-xun" secondAttribute="trailing" id="wGe-kx-Vzu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="News Detail" id="qtn-ai-en6"/>
                     <connections>
                         <outlet property="webView" destination="hXQ-f8-xun" id="MOO-BY-TzN"/>
                     </connections>

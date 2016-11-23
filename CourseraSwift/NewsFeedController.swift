@@ -52,7 +52,7 @@ class NewsFeedController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if  segue.identifier == "NewsDetailSegue",
+        if  /*segue.identifier == "NewsDetailSegue",*/
             let destination = segue.destinationViewController as? NewsDetail,
             let selectedRow = tableView.indexPathForSelectedRow?.row
         {
