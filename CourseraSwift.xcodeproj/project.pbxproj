@@ -15,6 +15,8 @@
 		4CCD9DED1DE3CBBC004ED90E /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */; };
 		4CCD9DF11DE3D4A3004ED90E /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */; };
 		4CCD9DF31DE3D95A004ED90E /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */; };
+		4CCD9DF51DE4D368004ED90E /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF41DE4D368004ED90E /* NewsFeed.swift */; };
+		4CCD9DF71DE4D6E8004ED90E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD9DF61DE4D6E8004ED90E /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedController.swift; sourceTree = "<group>"; };
 		4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		4CCD9DF41DE4D368004ED90E /* NewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsFeed.swift; path = ../NewsFeed.swift; sourceTree = "<group>"; };
+		4CCD9DF61DE4D6E8004ED90E /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				4CCD9DEC1DE3CBBC004ED90E /* NewsFeedController.swift */,
 				4CCD9DF01DE3D4A3004ED90E /* NewsFeedCell.swift */,
 				4CCD9DF21DE3D95A004ED90E /* NewsDetail.swift */,
+				4CCD9DF41DE4D368004ED90E /* NewsFeed.swift */,
+				4CCD9DF61DE4D6E8004ED90E /* News.swift */,
 				4CA40A091DDE9355009726A4 /* SecondViewController.swift */,
 				4CA40A0B1DDE9355009726A4 /* Main.storyboard */,
 				4CA40A0E1DDE9355009726A4 /* Assets.xcassets */,
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCD9DF51DE4D368004ED90E /* NewsFeed.swift in Sources */,
 				4CCD9DED1DE3CBBC004ED90E /* NewsFeedController.swift in Sources */,
 				4CA40A0A1DDE9355009726A4 /* SecondViewController.swift in Sources */,
 				4CCD9DF11DE3D4A3004ED90E /* NewsFeedCell.swift in Sources */,
+				4CCD9DF71DE4D6E8004ED90E /* News.swift in Sources */,
 				4CCD9DF31DE3D95A004ED90E /* NewsDetail.swift in Sources */,
 				4CA40A061DDE9355009726A4 /* AppDelegate.swift in Sources */,
 			);

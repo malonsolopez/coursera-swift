@@ -10,12 +10,19 @@ import UIKit
 
 class NewsFeedController: UITableViewController {
     
-    
-    @IBOutlet var newsList: UITableView!
+    var newsFeed: NewsFeed? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let url = NSURL(string: "https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=kittens")
+        self.updateFeed(url!, completion: { (feed) -> Void in
+            self.newsFeed = feed
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,7 +35,7 @@ class NewsFeedController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return newsFeed?.newsFeed.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -37,18 +44,36 @@ class NewsFeedController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! NewsFeedCell
         
         // Fetches the appropriate news for the data source layout.
-        cell.newsTitle.text = "Title"
-        cell.newsSnippet.text = "Snippet of this news"
+        let thisNew = newsFeed!.newsFeed[indexPath.row]
+        cell.newsTitle.text = thisNew.title
+        cell.newsSnippet.text = thisNew.snippet
         
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if  segue.identifier == "NewsDetailSegue",
-            let destination = segue.destinationViewController as? NewsDetail
-            //blogIndex = tableView.indexPathForSelectedRow?.row
+            let destination = segue.destinationViewController as? NewsDetail,
+            let selectedRow = tableView.indexPathForSelectedRow?.row
         {
-            destination.newsURL = "http://www.coursera.org"        }
+            
+            destination.newsURL = (self.newsFeed?.newsFeed[selectedRow].link)!
+        }
+    }
+    
+    func updateFeed(url: NSURL, completion: (feed: NewsFeed?) -> Void) {
+        let request = NSURLRequest(URL: url)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if error == nil && data != nil {
+                let feed = NewsFeed(data: data!, theTopic: "kittens")
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    completion(feed: feed)
+                })
+            }
+            
+        }
+        
+        task.resume()
     }
     
 }
