@@ -102,28 +102,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-21-gLJ">
-                                <rect key="frame" x="0.0" y="0.0" width="560" height="551"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-21-gLJ">
+                                <rect key="frame" x="20" y="25" width="560" height="551"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="courseralogo" translatesAutoresizingMaskIntoConstraints="NO" id="0aF-My-c6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="courseralogo" translatesAutoresizingMaskIntoConstraints="NO" id="0aF-My-c6C">
+                                        <rect key="frame" x="265" y="0.0" width="30" height="76"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" text="Coursera App Design and Development for iOS Course Assignment" textAlignment="center" lineBreakMode="clip" numberOfLines="2" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                        <rect key="frame" x="0.0" y="89" width="560" height="399"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" text="Coursera App Design and Development for iOS Course Assignment" textAlignment="center" lineBreakMode="clip" numberOfLines="0" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                        <rect key="frame" x="46" y="76" width="469" height="315"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                        <rect key="frame" x="0.0" y="488" width="560" height="34"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                        <rect key="frame" x="6" y="391" width="548" height="85"/>
                                         <string key="text">This application is been developed by Maria Alonso as the final assignment for the Coursera course "App Design and Development for iOS" by the University of Toronto.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-1B-Qdb">
-                                        <rect key="frame" x="0.0" y="521" width="560" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-1B-Qdb">
+                                        <rect key="frame" x="228" y="475" width="104" height="76"/>
                                         <state key="normal" title="Go to Coursera"/>
                                         <connections>
                                             <action selector="onCourseraButtonClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xbc-iY-OIL"/>
